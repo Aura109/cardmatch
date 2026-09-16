@@ -1,1 +1,5 @@
 res://Levels/level_38.tscn
+res://Scripts/game_save.gd
+res://Scripts/Menus/menu_main.gd
+res://Menus/menu_main.tscn
+res://Scripts/Menus/menu_win.gd

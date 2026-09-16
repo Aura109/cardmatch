@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxcq5cdcinj7n"]
+[gd_scene format=3 uid="uid://bxcq5cdcinj7n"]
 
 [ext_resource type="Script" uid="uid://dtshsif51wdcc" path="res://Scripts/Levels/level_38.gd" id="1_866lb"]
 [ext_resource type="Texture2D" uid="uid://c3na6vat5pei1" path="res://Assets/Backgrounds/CloudsNight.png" id="2_l4eyw"]
@@ -8,19 +8,19 @@
 [ext_resource type="PackedScene" uid="uid://co3vcql8neymg" path="res://Menus/menu_pause.tscn" id="6_rwfux"]
 [ext_resource type="PackedScene" uid="uid://bymy1jx0pilmo" path="res://Menus/menu_win.tscn" id="7_gif5t"]
 
-[node name="Level38" type="Node2D"]
+[node name="Level38" type="Node2D" unique_id=174080006]
 script = ExtResource("1_866lb")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=668898040]
 offset_right = 540.0
 offset_bottom = 959.0
 texture = ExtResource("2_l4eyw")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Gui" type="CanvasLayer" parent="."]
+[node name="Gui" type="CanvasLayer" parent="." unique_id=1296958955]
 
-[node name="Pause" type="TextureButton" parent="Gui"]
+[node name="Pause" type="TextureButton" parent="Gui" unique_id=850589102]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -33,137 +33,137 @@ texture_normal = ExtResource("3_v8kmh")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Cards" type="Node2D" parent="."]
+[node name="Cards" type="Node2D" parent="." unique_id=429871721]
 
-[node name="Card" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card" parent="Cards" unique_id=1267028956 instance=ExtResource("4_jmvye")]
 offset_left = 20.0
 offset_top = 256.0
 offset_right = 140.0
 offset_bottom = 416.0
 
-[node name="Card2" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card2" parent="Cards" unique_id=1569200869 instance=ExtResource("4_jmvye")]
 offset_left = 404.0
 offset_top = 256.0
 offset_right = 524.0
 offset_bottom = 416.0
 
-[node name="Card3" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card3" parent="Cards" unique_id=1204907966 instance=ExtResource("4_jmvye")]
 offset_left = 20.0
 offset_top = 592.0
 offset_right = 140.0
 offset_bottom = 752.0
 
-[node name="Card4" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card4" parent="Cards" unique_id=923482219 instance=ExtResource("4_jmvye")]
 offset_left = 404.0
 offset_top = 592.0
 offset_right = 524.0
 offset_bottom = 752.0
 
-[node name="Card5" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card5" parent="Cards" unique_id=2063626404 instance=ExtResource("4_jmvye")]
 offset_left = 276.0
 offset_top = 592.0
 offset_right = 396.0
 offset_bottom = 752.0
 
-[node name="Card6" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card6" parent="Cards" unique_id=1300057062 instance=ExtResource("4_jmvye")]
 offset_left = 276.0
 offset_top = 256.0
 offset_right = 396.0
 offset_bottom = 416.0
 
-[node name="Card7" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card7" parent="Cards" unique_id=1156639674 instance=ExtResource("4_jmvye")]
 offset_left = 404.0
 offset_top = 760.0
 offset_right = 524.0
 offset_bottom = 920.0
 
-[node name="Card8" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card8" parent="Cards" unique_id=1351120695 instance=ExtResource("4_jmvye")]
 offset_left = 148.0
 offset_top = 760.0
 offset_right = 268.0
 offset_bottom = 920.0
 
-[node name="Card9" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card9" parent="Cards" unique_id=1948562754 instance=ExtResource("4_jmvye")]
 offset_left = 404.0
 offset_top = 88.0
 offset_right = 524.0
 offset_bottom = 248.0
 
-[node name="Card10" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card10" parent="Cards" unique_id=527201212 instance=ExtResource("4_jmvye")]
 offset_left = 276.0
 offset_top = 88.0
 offset_right = 396.0
 offset_bottom = 248.0
 
-[node name="Card11" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card11" parent="Cards" unique_id=1863002415 instance=ExtResource("4_jmvye")]
 offset_left = 20.0
 offset_top = 760.0
 offset_right = 140.0
 offset_bottom = 920.0
 
-[node name="Card12" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card12" parent="Cards" unique_id=1431593034 instance=ExtResource("4_jmvye")]
 offset_left = 20.0
 offset_top = 88.0
 offset_right = 140.0
 offset_bottom = 248.0
 
-[node name="Card13" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card13" parent="Cards" unique_id=2098043503 instance=ExtResource("4_jmvye")]
 offset_left = 148.0
 offset_top = 256.0
 offset_right = 268.0
 offset_bottom = 416.0
 
-[node name="Card14" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card14" parent="Cards" unique_id=2128192447 instance=ExtResource("4_jmvye")]
 offset_left = 148.0
 offset_top = 88.0
 offset_right = 268.0
 offset_bottom = 248.0
 
-[node name="Card15" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card15" parent="Cards" unique_id=789727731 instance=ExtResource("4_jmvye")]
 offset_left = 148.0
 offset_top = 592.0
 offset_right = 268.0
 offset_bottom = 752.0
 
-[node name="Card16" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card16" parent="Cards" unique_id=1572985550 instance=ExtResource("4_jmvye")]
 offset_left = 276.0
 offset_top = 760.0
 offset_right = 396.0
 offset_bottom = 920.0
 
-[node name="Card17" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card17" parent="Cards" unique_id=541452593 instance=ExtResource("4_jmvye")]
 offset_left = 148.0
 offset_top = 424.0
 offset_right = 268.0
 offset_bottom = 584.0
 
-[node name="Card18" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card18" parent="Cards" unique_id=270132071 instance=ExtResource("4_jmvye")]
 offset_left = 277.0
 offset_top = 424.0
 offset_right = 397.0
 offset_bottom = 584.0
 
-[node name="Card19" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card19" parent="Cards" unique_id=326937987 instance=ExtResource("4_jmvye")]
 offset_left = 21.0
 offset_top = 424.0
 offset_right = 141.0
 offset_bottom = 584.0
 
-[node name="Card20" parent="Cards" instance=ExtResource("4_jmvye")]
+[node name="Card20" parent="Cards" unique_id=27899755 instance=ExtResource("4_jmvye")]
 offset_left = 405.0
 offset_top = 424.0
 offset_right = 525.0
 offset_bottom = 584.0
 
-[node name="Popups" type="CanvasLayer" parent="."]
+[node name="Popups" type="CanvasLayer" parent="." unique_id=470483505]
 
-[node name="MenuLose" parent="Popups" instance=ExtResource("5_ufvjw")]
+[node name="MenuLose" parent="Popups" unique_id=99445709 instance=ExtResource("5_ufvjw")]
 visible = false
 
-[node name="menuPause" parent="Popups" instance=ExtResource("6_rwfux")]
+[node name="menuPause" parent="Popups" unique_id=406424225 instance=ExtResource("6_rwfux")]
 visible = false
 
-[node name="MenuWin" parent="Popups" instance=ExtResource("7_gif5t")]
+[node name="MenuWin" parent="Popups" unique_id=2141174917 instance=ExtResource("7_gif5t")]
 visible = false
 
 [connection signal="pressed" from="Gui/Pause" to="." method="_on_pause_pressed"]

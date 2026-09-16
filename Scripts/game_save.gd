@@ -27,6 +27,7 @@ var jsonString
 
 func _ready() -> void:
 	_verify_save_directory(SAVE_DIR)
+	#_load_save()
 
 
 func _verify_save_directory(dir) ->void:
@@ -95,40 +96,6 @@ func _load_save() -> void:
 	else:
 		printerr("Cannot open non-existant file at %s"%[path])
 
-
-func _load_save_from_gps(snapshot) -> void:
-	if not GodotPlayGameServices.android_plugin:
-		_load_save()
-	
-	var metadata = snapshot.metadata
-	var content = snapshot.content.get_string_from_utf8()
-	
-	var data = JSON.parse_string(content)
-	if !data:
-		printerr("Cannot parse %s as a json string: (%s)"%[metadata.unique_name, content])
-		return
-	
-	_assign_in_game_manager(data)
-	#SnapshotsClient.load_game(FILE_NAME_GPS, false)
-	#SnapshotsClient.game_loaded.connect(
-		#func (snapshot: SnapshotsClient.Snapshot):
-			#if !snapshot:
-				#print("Snapshot not found")
-				#_load_save()
-				#return
-			#
-			#var metadata = snapshot.metadata
-			#var content = snapshot.content.get_string_from_utf8()
-			#
-			#var data = JSON.parse_string(content)
-			#if not data:
-				#printerr("Cannot parse %s as a json string: (%s)"%[metadata.unique_name, content])
-				#return
-			#
-			#_assign_in_game_manager(data)
-			#print(data.back)
-	#)
-	pass
 
 
 func _assign_in_game_manager(data) -> void:

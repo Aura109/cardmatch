@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://drxvts7vpgyw7"]
+[gd_scene format=3 uid="uid://drxvts7vpgyw7"]
 
 [ext_resource type="Texture2D" uid="uid://c3na6vat5pei1" path="res://Assets/Backgrounds/CloudsNight.png" id="1_bbp54"]
 [ext_resource type="Script" uid="uid://cut833f4vxtk2" path="res://Scripts/Menus/menu_main.gd" id="1_orlay"]
@@ -7,22 +7,20 @@
 [ext_resource type="Texture2D" uid="uid://d4lv27njshrwh" path="res://Assets/GUI/Info_BTN.png" id="4_2ybpo"]
 [ext_resource type="PackedScene" uid="uid://btn0y3kqqxy33" path="res://Menus/menu_settings.tscn" id="6_1g1g8"]
 [ext_resource type="PackedScene" uid="uid://cwhlqps0o5u0r" path="res://Menus/menu_deck.tscn" id="7_jkq4u"]
-[ext_resource type="Script" uid="uid://bek843ru3qbwu" path="res://addons/GodotPlayGameServices/scripts/sign_in/sign_in_client.gd" id="8_s7xdb"]
-[ext_resource type="Script" uid="uid://c6ooxjngflucx" path="res://addons/GodotPlayGameServices/scripts/snapshots/snapshots_client.gd" id="9_0rwhb"]
 
-[node name="MenuMain" type="Node2D"]
+[node name="MenuMain" type="Node2D" unique_id=1677928449]
 script = ExtResource("1_orlay")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=143536899]
 offset_right = 540.0
 offset_bottom = 959.0
 texture = ExtResource("1_bbp54")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="Buttons" type="CanvasLayer" parent="."]
+[node name="Buttons" type="CanvasLayer" parent="." unique_id=506872711]
 
-[node name="Start" type="TextureButton" parent="Buttons"]
+[node name="Start" type="TextureButton" parent="Buttons" unique_id=1252779847]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -38,7 +36,7 @@ texture_normal = ExtResource("2_tl2ig")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="StartLabel" type="Label" parent="Buttons/Start"]
+[node name="StartLabel" type="Label" parent="Buttons/Start" unique_id=259832525]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,7 +49,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Exit" type="TextureButton" parent="Buttons"]
+[node name="Exit" type="TextureButton" parent="Buttons" unique_id=833890294]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -67,7 +65,7 @@ texture_normal = ExtResource("2_tl2ig")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="ExitLabel" type="Label" parent="Buttons/Exit"]
+[node name="ExitLabel" type="Label" parent="Buttons/Exit" unique_id=809441756]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -80,7 +78,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Settings" type="TextureButton" parent="Buttons"]
+[node name="Settings" type="TextureButton" parent="Buttons" unique_id=918126333]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -91,14 +89,14 @@ texture_normal = ExtResource("3_rh7xe")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Help" type="TextureButton" parent="Buttons"]
+[node name="Help" type="TextureButton" parent="Buttons" unique_id=223273813]
 offset_right = 104.0
 offset_bottom = 104.0
 texture_normal = ExtResource("4_2ybpo")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Deck" type="TextureButton" parent="Buttons"]
+[node name="Deck" type="TextureButton" parent="Buttons" unique_id=33082137]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -114,7 +112,7 @@ texture_normal = ExtResource("2_tl2ig")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Buttons/Deck"]
+[node name="Label" type="Label" parent="Buttons/Deck" unique_id=904564269]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -126,24 +124,20 @@ text = "Deck"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Popups" type="CanvasLayer" parent="."]
+[node name="Popups" type="CanvasLayer" parent="." unique_id=1599922460]
 
-[node name="MenuSettings" parent="Popups" instance=ExtResource("6_1g1g8")]
+[node name="MenuSettings" parent="Popups" unique_id=1156106316 instance=ExtResource("6_1g1g8")]
 visible = false
 
-[node name="menuDeck" parent="Popups" instance=ExtResource("7_jkq4u")]
+[node name="menuDeck" parent="Popups" unique_id=59350191 instance=ExtResource("7_jkq4u")]
 visible = false
 
-[node name="PlayGamesSignInClient" type="Node" parent="."]
-script = ExtResource("8_s7xdb")
+[node name="PlayGamesSignInClient" type="Node" parent="." unique_id=754409633]
 
-[node name="PlayGamesSnapshotsClient" type="Node" parent="."]
-script = ExtResource("9_0rwhb")
+[node name="PlayGamesSnapshotsClient" type="Node" parent="." unique_id=395212098]
 
 [connection signal="pressed" from="Buttons/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Buttons/Help" to="." method="_on_help_pressed"]
 [connection signal="pressed" from="Buttons/Deck" to="." method="_on_deck_pressed"]
-[connection signal="user_authenticated" from="PlayGamesSignInClient" to="." method="_on_play_games_sign_in_client_user_authenticated"]
-[connection signal="game_loaded" from="PlayGamesSnapshotsClient" to="." method="_on_play_games_snapshots_client_game_loaded"]
