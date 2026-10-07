@@ -39,10 +39,3 @@ func _ready() -> void:
 	background.texture = load(GameManager.background)
 	
 	GameSave._load_save()
-
-
-func _on_play_games_sign_in_client_user_authenticated(is_authenticated: bool) -> void:
-	#if not is_authenticated:
-		#play_games_sign_in_client.sign_in()
-		#maxSigninRetries -= 1
-	pass # Replace with function body.

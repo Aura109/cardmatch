@@ -4,7 +4,6 @@ extends Popup
 var nextLevel
 @onready var label: Label = $Coins/CoinsNum/Label
 
-#var achievement: AchievementsClient.Achievement
 var waiting := false
 var firstPopup = true
 

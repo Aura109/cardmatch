@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bymy1jx0pilmo"]
+[gd_scene format=3 uid="uid://bymy1jx0pilmo"]
 
 [ext_resource type="Texture2D" uid="uid://bdcj842sd0dqo" path="res://Assets/GUI/Window.png" id="1_cgiq5"]
 [ext_resource type="Script" uid="uid://ov573oawuk4p" path="res://Scripts/Menus/menu_win.gd" id="1_p52xy"]
@@ -7,17 +7,17 @@
 [ext_resource type="Texture2D" uid="uid://7cc07j5oqfsk" path="res://Assets/GUI/Close_BTN.png" id="4_71rgx"]
 [ext_resource type="Texture2D" uid="uid://cql2qrr8q7wsc" path="res://Assets/GUI/Play_BTN.png" id="5_jagn5"]
 [ext_resource type="Texture2D" uid="uid://dv3w4a5g5116o" path="res://Assets/GUI/Table_02.png" id="6_5jnoo"]
-[ext_resource type="Script" uid="uid://c6ooxjngflucx" path="res://addons/GodotPlayGameServices/scripts/snapshots/snapshots_client.gd" id="8_mc00e"]
 
-[node name="MenuWin" type="Popup"]
+[node name="MenuWin" type="Popup" unique_id=435203316]
 transparent_bg = true
+oversampling_override = 1.0
 size = Vector2i(540, 960)
 visible = true
 script = ExtResource("1_p52xy")
 
-[node name="Background" type="CanvasLayer" parent="."]
+[node name="Background" type="CanvasLayer" parent="." unique_id=359772392]
 
-[node name="Window" type="TextureRect" parent="Background"]
+[node name="Window" type="TextureRect" parent="Background" unique_id=382895955]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -32,7 +32,7 @@ grow_vertical = 2
 texture = ExtResource("1_cgiq5")
 expand_mode = 1
 
-[node name="Heading" type="Label" parent="Background/Window"]
+[node name="Heading" type="Label" parent="Background/Window" unique_id=298557115]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -47,9 +47,9 @@ text = "Level clear"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Stars" type="CanvasLayer" parent="."]
+[node name="Stars" type="CanvasLayer" parent="." unique_id=43829478]
 
-[node name="Star1" type="TextureRect" parent="Stars"]
+[node name="Star1" type="TextureRect" parent="Stars" unique_id=891361457]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -61,7 +61,7 @@ grow_horizontal = 2
 texture = ExtResource("2_j5wox")
 expand_mode = 1
 
-[node name="Star2" type="TextureRect" parent="Stars"]
+[node name="Star2" type="TextureRect" parent="Stars" unique_id=111714496]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -73,7 +73,7 @@ grow_vertical = 2
 texture = ExtResource("2_j5wox")
 expand_mode = 1
 
-[node name="Star3" type="TextureRect" parent="Stars"]
+[node name="Star3" type="TextureRect" parent="Stars" unique_id=265152409]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -88,9 +88,9 @@ grow_vertical = 2
 texture = ExtResource("2_j5wox")
 expand_mode = 1
 
-[node name="Buttons" type="CanvasLayer" parent="."]
+[node name="Buttons" type="CanvasLayer" parent="." unique_id=936279889]
 
-[node name="Restart" type="TextureButton" parent="Buttons"]
+[node name="Restart" type="TextureButton" parent="Buttons" unique_id=1886365427]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -106,7 +106,7 @@ texture_normal = ExtResource("3_y1nvq")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Exit" type="TextureButton" parent="Buttons"]
+[node name="Exit" type="TextureButton" parent="Buttons" unique_id=1498148287]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -119,7 +119,7 @@ texture_normal = ExtResource("4_71rgx")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="NextLevel" type="TextureButton" parent="Buttons"]
+[node name="NextLevel" type="TextureButton" parent="Buttons" unique_id=331795730]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -135,9 +135,9 @@ texture_normal = ExtResource("5_jagn5")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Coins" type="CanvasLayer" parent="."]
+[node name="Coins" type="CanvasLayer" parent="." unique_id=1437089501]
 
-[node name="CoinsNum" type="TextureRect" parent="Coins"]
+[node name="CoinsNum" type="TextureRect" parent="Coins" unique_id=244034959]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
@@ -153,7 +153,7 @@ texture = ExtResource("6_5jnoo")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Coins/CoinsNum"]
+[node name="Label" type="Label" parent="Coins/CoinsNum" unique_id=1094321326]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -165,7 +165,7 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CoinLabel" type="Label" parent="Coins"]
+[node name="CoinLabel" type="Label" parent="Coins" unique_id=808186066]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
@@ -179,11 +179,7 @@ text = "Coins"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlayGamesSnapshotsClient" type="Node" parent="."]
-script = ExtResource("8_mc00e")
-
 [connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
 [connection signal="pressed" from="Buttons/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Buttons/NextLevel" to="." method="_on_next_level_pressed"]
-[connection signal="game_saved" from="PlayGamesSnapshotsClient" to="." method="_on_play_games_snapshots_client_game_saved"]
